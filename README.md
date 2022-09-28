@@ -1,4 +1,4 @@
-#Course project - "MyHabits" (Netology)
+# Course project - "MyHabits" (Netology)
 
 
  <p align="center" width="100%">
