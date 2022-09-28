@@ -7,9 +7,8 @@
 
 import UIKit
 
-let gray = UIColor(red: 249/255.0, green: 249/255.0, blue: 249/255.0, alpha: 0.85)
+let purple = #colorLiteral(red: 0.631372549, green: 0.0862745098, blue: 0.9960784314, alpha: 1)
 
-let lightGray = UIColor(red: 242/255.0, green: 242/255.0, blue: 247/255.0, alpha: 1)
+let lightGray = #colorLiteral(red: 0.9594197869, green: 0.9599153399, blue: 0.975127399, alpha: 1)
 
-let purple = UIColor(red: 161/255.0, green: 22/255.0, blue: 204/255.0, alpha: 1)
-
+let gray = #colorLiteral(red: 0.9813271165, green: 0.9813271165, blue: 0.9813271165, alpha: 1)
