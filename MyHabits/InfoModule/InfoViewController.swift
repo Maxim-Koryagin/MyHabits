@@ -51,8 +51,7 @@ class InfoViewController: UIViewController {
         
         setupUI()
         
-        view.backgroundColor = UIColor(#colorLiteral(red: 242, green: 242, blue: 247, alpha: 1))
-//        navigationController?.navigationBar.isHidden = false
+        view.backgroundColor = .white
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -73,7 +72,7 @@ class InfoViewController: UIViewController {
     
     private func setupNavBar() {
         
-        navigationController?.navigationBar.backgroundColor = UIColor(#colorLiteral(red: 249/255.0, green: 249/255.0, blue: 249/255.0, alpha: 0.94))
+        navigationController?.navigationBar.backgroundColor = .gray
         
         let appearance = UINavigationBarAppearance()
         navigationController?.navigationBar.scrollEdgeAppearance = appearance

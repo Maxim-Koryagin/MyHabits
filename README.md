@@ -1,1 +1,6 @@
-course project - MyHabits 
+#Course project - "MyHabits" (Netology)
+
+
+  <p align="center" width="100%">
+    <img width="75%" src="./Assets/promo.png"> 
+  </p>/Users/kosmokosi/Desktop/MyHabits/Promo.png
