@@ -25,6 +25,7 @@ class HabitViewController: UIViewController {
         let label = UILabel()
         label.text = "НАЗВАНИЕ"
         label.numberOfLines = 2
+        label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -58,6 +59,7 @@ class HabitViewController: UIViewController {
     private lazy var timeLabel: UILabel = {
         let label = UILabel()
         label.text = "ВРЕМЯ"
+        label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -66,6 +68,7 @@ class HabitViewController: UIViewController {
     private lazy var chooseTimeLabel: UILabel = {
         let label = UILabel()
         label.text = "Каждый день в"
+        label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -83,6 +86,7 @@ class HabitViewController: UIViewController {
     private lazy var timePicker: UIDatePicker = {
         let picker = UIDatePicker()
         picker.datePickerMode = .time
+        picker.backgroundColor = .black
         picker.preferredDatePickerStyle = .wheels
         picker.translatesAutoresizingMaskIntoConstraints = false
         return picker
@@ -103,7 +107,7 @@ class HabitViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
+        view.backgroundColor = lightGray
         setupUI()
     }
 

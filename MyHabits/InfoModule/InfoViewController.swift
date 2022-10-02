@@ -15,12 +15,14 @@ final class InfoViewController: UIViewController {
     
     private lazy var contentView: UIView = {
         let view  = UIView()
+        view.backgroundColor = lightGray
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     private lazy var scrollView: UIScrollView = {
         let view = UIScrollView()
+        view.backgroundColor = lightGray
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -36,6 +38,7 @@ final class InfoViewController: UIViewController {
     private lazy var textView: UITextView = {
         let text = UITextView(frame: .zero)
         text.font = UIFont.systemFont(ofSize: 17, weight: .regular)
+        text.backgroundColor = lightGray
         text.isEditable = false
         text.isScrollEnabled = false
         text.textColor = .black
@@ -72,7 +75,7 @@ final class InfoViewController: UIViewController {
     
     private func setupNavBar() {
         
-        navigationController?.navigationBar.backgroundColor = .gray
+        navigationController?.navigationBar.backgroundColor = gray
         
         let appearance = UINavigationBarAppearance()
         navigationController?.navigationBar.scrollEdgeAppearance = appearance

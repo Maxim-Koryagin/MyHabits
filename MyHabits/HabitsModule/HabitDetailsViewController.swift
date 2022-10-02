@@ -21,6 +21,7 @@ class HabitDetailsViewController: UIViewController {
         let view = UITableView()
         view.register(HabitDetailsTableViewCell.self, forCellReuseIdentifier: "HabitDetailsTableViewCell")
         view.backgroundColor = lightGray
+        view.rowHeight = 44
         view.delegate = self
         view.dataSource = self
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -71,7 +72,6 @@ class HabitDetailsViewController: UIViewController {
     private func setupNavBar() {
 
         navigationController?.navigationBar.backgroundColor = gray
-        navigationController?.navigationBar.prefersLargeTitles = false
 
         let editAction = UIBarButtonItem(title: "Править", style: .plain, target: self, action: #selector(editHabbit))
         navigationItem.rightBarButtonItem = editAction
@@ -110,10 +110,6 @@ extension HabitDetailsViewController: UITableViewDelegate, UITableViewDataSource
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "АКТИВНОСТЬ"
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        44
     }
 
 }
