@@ -53,7 +53,6 @@ final class InfoViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-        
         view.backgroundColor = .white
     }
     

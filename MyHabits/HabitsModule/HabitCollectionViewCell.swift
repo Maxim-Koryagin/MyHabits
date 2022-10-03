@@ -118,6 +118,8 @@ class HabitCollectionViewCell: UICollectionViewCell {
             HabitsStore.shared.track(HabitsStore.shared.habits[index])
             checkMarkButton.backgroundColor = titleLabel.textColor
             counterLabel.text = "Счетчик \(HabitsStore.shared.habits[index].trackDates.count)"
+            
+            NotificationCenter.default.post(name: Notification.Name("reloadData"), object: nil)
         }
     }
     

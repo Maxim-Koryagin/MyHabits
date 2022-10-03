@@ -71,6 +71,7 @@ class HabitDetailsViewController: UIViewController {
 
     private func setupNavBar() {
 
+        navigationItem.largeTitleDisplayMode = .never
         navigationController?.navigationBar.backgroundColor = gray
 
         let editAction = UIBarButtonItem(title: "Править", style: .plain, target: self, action: #selector(editHabbit))

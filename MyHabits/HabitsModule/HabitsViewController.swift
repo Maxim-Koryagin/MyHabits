@@ -41,9 +41,14 @@ class HabitsViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         navigationController?.navigationBar.prefersLargeTitles = true
         collectionView.reloadData()
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(methodOfReceivedNotification(notification:)),
+                                               name: Notification.Name("reloadData"),
+                                               object: nil)
     }
 
     // MARK: Methods
@@ -87,6 +92,10 @@ class HabitsViewController: UIViewController {
         self.present(presentViewController, animated: true, completion: nil)
     }
 
+    @objc func methodOfReceivedNotification(notification: Notification) {
+        collectionView.reloadData()
+    }
+    
 }
 
 extension HabitsViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

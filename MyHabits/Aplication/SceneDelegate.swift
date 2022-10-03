@@ -18,7 +18,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.rootViewController = TabBarController()
         window.makeKeyAndVisible()
         self.window = window
-    
     }
 
+    func sceneDidBecomeActive(_ scene: UIScene) {
+        self.window?.viewWithTag(12)?.removeFromSuperview()
+    }
+    
+    func sceneWillResignActive(_ scene: UIScene) {
+        let blurEffect = UIBlurEffect(style: .light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        
+        blurEffectView.frame = window!.frame
+        blurEffectView.tag = 12
+        self.window?.addSubview(blurEffectView)
+    }
+    
 }
